@@ -1,0 +1,9 @@
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 83px;
+  height: 82px;
+  color: transparent;
+  background: url(../../../images/logo_header.gif);
+}

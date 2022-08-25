@@ -1,0 +1,7 @@
+.navWrap {
+  position: relative;
+  margin-left: 15%;
+  padding-right: 180px;
+
+  display: flex;
+}

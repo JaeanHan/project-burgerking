@@ -1,7 +1,15 @@
-.head_menuWrap {
+.headerWrap {
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 50;
+  height: 120px;
+  background-color: white;
+
+  box-shadow: 0 2px 2px rgb(0 0 0 / 15%);
+}
+
+.yeah {
+  height: 442px;
 }

@@ -1,10 +1,11 @@
-import Header from "./Header";
 import styles from "./HeaderWrap.module.css";
 
-function HeaderWrap() {
+function HeaderWrap(props) {
   return (
-    <div className={styles.head_menuWrap}>
-      <Header />
+    <div
+      className={`${styles.headerWrap} ${props.isHovering ? styles.yeah : ""}`}
+    >
+      {props.children}
     </div>
   );
 }

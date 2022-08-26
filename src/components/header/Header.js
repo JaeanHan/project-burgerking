@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Header.module.css";
 import HeaderLogo from "./HeaderLogo";
+import HeaderWrap from "./HeaderWrap";
 import NavBar from "./NavBar";
 import NavBarWrap from "./NavBarWrap";
 
@@ -22,36 +23,47 @@ const event = ["이벤트"];
 const brandStory = ["BRAND", "WHOPPER", "COMM."];
 
 function Header() {
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHoveringState, setIsHoveringState] = useState(false);
+
   const onMouseOverHandler = () => {
-    setIsHovering(true);
+    setIsHoveringState(true);
     // console.log(1);
   };
   const onMouseOutHandler = () => {
-    setIsHovering(false);
+    setIsHoveringState(false);
     // console.log(0);
   };
   return (
-    <div
-      className={style["header-wrap"]}
-      onMouseEnter={onMouseOverHandler}
-      onMouseLeave={onMouseOutHandler}
-    >
-      <HeaderLogo />
-      <NavBarWrap>
-        <NavBar content={menu} title="메뉴소개" isHovering={isHovering} />
-        <NavBar content={restautant} title="매장소개" isHovering={isHovering} />
-        <NavBar content={event} title="이벤트" isHovering={isHovering} />
-        <NavBar
-          content={brandStory}
-          title="브랜드스토리"
-          isHovering={isHovering}
-        />
-      </NavBarWrap>
-      <button type="button" className={style.btn_order}>
-        <strong>딜리버리 주문</strong>
-      </button>
-    </div>
+    <HeaderWrap isHovering={isHoveringState}>
+      <div
+        className={style["header-wrap"]}
+        onMouseEnter={onMouseOverHandler}
+        onMouseLeave={onMouseOutHandler}
+      >
+        <HeaderLogo />
+        <NavBarWrap>
+          <NavBar
+            content={menu}
+            title="메뉴소개"
+            isHovering={isHoveringState}
+          />
+          <NavBar
+            content={restautant}
+            title="매장소개"
+            isHovering={isHoveringState}
+          />
+          <NavBar content={event} title="이벤트" isHovering={isHoveringState} />
+          <NavBar
+            content={brandStory}
+            title="브랜드스토리"
+            isHovering={isHoveringState}
+          />
+        </NavBarWrap>
+        <button type="button" className={style.btn_order}>
+          <strong>딜리버리 주문</strong>
+        </button>
+      </div>
+    </HeaderWrap>
   );
 }
 

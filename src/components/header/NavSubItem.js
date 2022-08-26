@@ -1,3 +1,5 @@
+import "./NavSubItem.module.css";
+
 function NavSubItem(props) {
   return (
     <li>

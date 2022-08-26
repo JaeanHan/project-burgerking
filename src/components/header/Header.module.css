@@ -8,6 +8,14 @@
   cursor: pointer;
 }
 
+/* .header-wrap::before {
+  height: 442px;
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+} */
+
 .btn_order {
   background-color: #d72300;
 

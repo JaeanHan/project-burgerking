@@ -22,7 +22,7 @@
 .item__span {
   display: inline-block;
   padding-right: 19px;
-  background: url(../../../images/nav_item_span_img.gif) no-repeat 100%;
+  background: url(../../images/nav_item_span_img.gif) no-repeat 100%;
   font-weight: 400;
 }
 
@@ -34,9 +34,23 @@
   min-width: 100%;
   overflow: hidden;
   z-index: 100;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .yeah {
   height: 322px;
+  animation: showSub 0.3s linear;
+}
+
+@keyframes showSub {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.submenu li {
+  margin-bottom: 5px;
 }

@@ -1,0 +1,12 @@
+.image {
+  width: 100%;
+  display: inline-block;
+}
+
+.image img {
+  width: 100%;
+}
+
+.image__dots {
+  text-align: center;
+}
